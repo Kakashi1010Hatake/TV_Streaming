@@ -23,17 +23,6 @@ body, html {
     border: none;
 }
 
-/* طبقة حماية لمنع التفاعل المباشر مع الإعلانات داخل الإطار */
-/* .glass-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background: transparent;
-} */
-
 /* معلومات القناة */
 .channel-info {
     position: absolute;
@@ -84,20 +73,6 @@ body, html {
     background-color: #f57c20;
 }
 
-/* القائمة الجانبية */
-.channels-side {
-    width: 320px;
-    background: #4a4a4a;
-    color: white;
-    padding: 40px 20px;
-}
-
-#channel-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 30px;
-}
-
 #channel-list li {
     padding: 15px;
     margin-bottom: 10px;
@@ -120,6 +95,8 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    transform: scale(75%);
 }
 
 .remote-control {
@@ -155,7 +132,7 @@ body, html {
 
 /* الحاوية الجانبية للقنوات */
 .channels-side {
-    width: 25%;
+    width: 35%;
     background: #4a4a4a;
     color: white;
     padding: 20px;
@@ -173,6 +150,7 @@ body, html {
     padding-bottom: 10px;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     flex-shrink: 0; /* يمنع العنوان من الانكماش */
+    font-size: 25px;
 }
 
 /* القائمة الفعلية (منطقة الانزلاق الشاقولي) */
@@ -215,7 +193,7 @@ body, html {
     white-space: nowrap;    /* منع نص القناة من النزول لسطر جديد */
     overflow: hidden;
     text-overflow: ellipsis; /* إضافة نقاط (...) إذا كان الاسم طويلاً جداً */
-    font-size: 18px;
+    font-size: 20px;
 }
 
 /* تأثير عند اختيار القناة (Active) */
@@ -260,11 +238,12 @@ body, html {
 }
 
 .text{
-    width: 94%;
-    height: 40px;
-    font-size: 150%;
-    color: whitesmoke;
+    width: 95%;
+    height: 50px;
+    font-size: 25px;
 
-    border: 2px whitesmoke solid;
-    text-align: center;
+    border: 1px whitesmoke solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
