@@ -68,7 +68,7 @@ body, html {
 .main-btn {
     position: absolute;
     bottom: 40px;
-    left: 50%;
+    left: 10%;
     transform: translateX(-50%);
     z-index: 20;
     padding: 15px 45px;
