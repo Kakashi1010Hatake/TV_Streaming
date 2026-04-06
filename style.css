@@ -212,7 +212,7 @@ body, html {
     white-space: nowrap;    /* منع نص القناة من النزول لسطر جديد */
     overflow: hidden;
     text-overflow: ellipsis; /* إضافة نقاط (...) إذا كان الاسم طويلاً جداً */
-    font-size: 30px;
+    font-size: 18px;
 }
 
 /* تأثير عند اختيار القناة (Active) */
