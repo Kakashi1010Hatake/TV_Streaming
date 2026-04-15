@@ -46,6 +46,8 @@ body, html {
     height: 100%;
     z-index: 10;
     display: flex;
+    box-sizing: border-box;
+    padding: 2%;
     justify-content: space-between;
     background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(8px);
@@ -133,15 +135,16 @@ body, html {
 /* الحاوية الجانبية للقنوات */
 .channels-side {
     width: 35%;
-    background: #4a4a4a;
+    background: #4a4a4a2d;
     color: white;
     padding: 20px;
     display: flex;
-    flex-direction: column; /* ترتيب العناصر شاقولياً */
-    height: 100vh;          /* تأخذ كامل ارتفاع الشاشة */
+    flex-direction: column;
     box-sizing: border-box;
     position: relative;
+    right: 5%;
     z-index: 15;
+    border-radius: 15px;
 }
 
 /* العنوان يبقى ثابتاً في الأعلى */
@@ -163,10 +166,6 @@ body, html {
     overflow-y: auto;       /* تفعيل التمرير العمودي عند زيادة العناصر */
     overflow-x: hidden;     /* منع التمرير الأفقي تماماً */
     flex-grow: 1;           /* تأخذ باقي مساحة الارتفاع المتاحة */
-    
-    /* تحسين شكل شريط التمرير (Scrollbar) */
-    scrollbar-width: thin;
-    scrollbar-color: #f57c20 #333;
 }
 
 /* تخصيص السكرول بار لمتصفحات Chrome و Edge */
@@ -183,17 +182,15 @@ body, html {
 
 /* عناصر القائمة */
 #channel-list li {
+    background-color: transparent;
     width: 85%;
-    padding: 15px;
-    margin-bottom: 10px;
-    background: rgba(255,255,255,0.05);
+    height: 5px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
     white-space: nowrap;    /* منع نص القناة من النزول لسطر جديد */
     overflow: hidden;
     text-overflow: ellipsis; /* إضافة نقاط (...) إذا كان الاسم طويلاً جداً */
-    font-size: 20px;
+    display: flex;
+    align-items: center;
 }
 
 /* تأثير عند اختيار القناة (Active) */
@@ -201,7 +198,6 @@ body, html {
     background: #f57c20;
     color: white;
     font-weight: bold;
-    transform: scale(1.02);
 }
 
 /* حاوية زر OK وزر الإلغاء */
