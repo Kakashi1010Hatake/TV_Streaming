@@ -34,18 +34,27 @@ btnDown.addEventListener('click', () => {
     }
 });
 
-// تشغيل القناة عند ضغط OK
+const videoWrapper = document.getElementById('video-wrapper');
+
 btnOk.addEventListener('click', () => {
     const selectedLi = channelItems[currentIndex];
     const newUrl = selectedLi.getAttribute('data-url');
+    const isCustomSize = selectedLi.getAttribute('data-custom-size') === 'true';
 
     // تصفير الإطار لقتل أي عمليات سابقة (تحرير الرام)
     mainFrame.src = "about:blank";
 
-    // تحميل الرابط الجديد بعد مهلة قصيرة جداً
+    // تغيير كلاس الحاوية حسب نوع القناة
+    if (isCustomSize) {
+        videoWrapper.classList.add('custom-size');
+    } else {
+        videoWrapper.classList.remove('custom-size');
+    }
+
+    // تحميل الرابط الجديد بعد مهلة قصيرة
     setTimeout(() => {
         mainFrame.src = newUrl;
-        channelDisplay.innerText = selectedLi.innerText;
+        if (channelDisplay) channelDisplay.innerText = selectedLi.innerText;
     }, 50);
 
     // إغلاق الواجهة
