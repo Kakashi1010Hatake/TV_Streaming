@@ -10,28 +10,26 @@
 
     <div class="video-container" id="video-wrapper">
         <iframe id="main-tv-frame" 
-                src="about:blank"  
+                src="about:blank"
                 allow="autoplay; encrypted-media" 
                 allowfullscreen >
         </iframe>
-        <!-- <div class="channel-info" id="channel-display">الرجاء اختيار قناة</div> -->
     </div>
 
     <button id="menu-trigger" class="main-btn">اضغط لفتح القائمة</button>
 
     <div id="tv-overlay" class="overlay hidden">
-        
         <div class="channels-side">
             <h3>قائمة القنوات</h3>
             <ul id="channel-list">
-                <li class="active" data-url="https://play.arab-stream.live/p/spacetoon.html">سبيستون</li>
-                <li data-url="https://vk.com/video_ext.php?oid=849640780&id=456239204&hd=2&autoplay=1">سي ان نيتوورك</li>
-                <li data-url="https://play.arab-stream.live/p/giniko.html?ch=1626">ماشا والدب</li>
-                <li data-url="https://www.youtube.com/embed/S_6wjcgw1mk?si=ZdkAsAGmNWs8M3do">ماشا والدب</li>
+                <li class="active" data-url="https://www.youtube.com/embed/uPediHM5a9M?autoplay=1&mute=2&enablejsapi=1">سبيستون</li>
+                <li data-url="https://vk.com/video_ext.php?oid=849640780&id=456239204&hd=2&autoplay=1&mute=2">سي ان نيتوورك</li>
+                <li data-url="https://www.youtube.com/embed/S_6wjcgw1mk?autoplay=1&mute=2&enablejsapi=1">ماشا والدب - عربي</li>
+                <li data-url="https://play.arab-stream.live/p/giniko.html?ch=1626">ماشا والدب - أجنبي</li>
                 <!--------------------------------------------------------------------------------------------------->
                 <li data-url="https://play.arab-stream.live/p/mbc-1-ksa.html">إم بي سي 1</li>
-                <li data-url="https://play.arab-stream.live/p/mbc-2-live.html">إم بي سي 2</li>
-                <li data-url="https://play.arab-stream.live/p/mbc-3-ksa.html">إم بي سي 3</li>
+                <!-- <li data-url="https://www.elahmad.ch/tv/live/shahid_shaka.php?id=mbc2">إم بي سي 2</li> -->
+                <li data-url="https://mbc-3.catsbengal.com/default.php">إم بي سي 3</li>
                 <li data-url="https://play.arab-stream.live/p/mbc-4.html">إم بي سي 4</li>
                 <li data-url="https://play.arab-stream.live/p/mbc-5.html">إم بي سي 5</li>
                 <li data-url="https://play.arab-stream.live/p/mbc-drama-ksa.html">إم بي سي دراما</li>
@@ -39,31 +37,38 @@
                 <li data-url="https://play.arab-stream.live/p/mbc-masr-1.html">إم بي سي مصر</li>
                 <li data-url="https://play.arab-stream.live/p/mbc-masr-2.html">إم بي سي مصر 2</li>
                 <li data-url="https://play.arab-stream.live/p/mbc-misr-drama.html">إم بي سي مصر دراما</li>
-                <li data-url="https://play.arab-stream.live/p/mixbelaraby.html">ميكس بالعربي</li>
-                <li data-url="https://vk.com/video_ext.php?oid=849640780&id=456239178&hd=2&autoplay=1">إم بي سي ماكس</li>
-                <li data-url="https://play.arab-stream.live/p/mbc-action.html">إم بي سي أكشن</li>
+                <!-- <li data-url="https://vk.com/video_ext.php?oid=849640780&id=456239178&hd=2&autoplay=1">إم بي سي ماكس</li>
+                <li data-url="https://play.arab-stream.live/p/mbc-action.html">إم بي سي أكشن</li> -->
                 <li data-url="https://play.arab-stream.live/p/mbc-bollywood.html">إم بي سي بوليوود</li>
                 <li data-url="https://play.arab-stream.live/p/mbc-iraq.html">إم بي سي عراق</li>
-                <li data-url="https://play.arab-stream.live/p/mbc-plus-elife.html">إم بي سي إليف</li>
-                <li data-url="">إم بي سي فارسي</li>
-                <li data-url="">دبي ون</li>
+                <li data-url="https://www.parsatv.com/embed.php?name=MBC-Persia&auto=true" data-custom-size="true">إم بي سي فارسي</li>
+                <!-- <li data-url="https://play.arab-stream.live/p/mbc-plus-elife.html">إم بي سي إليف</li> -->
                 <!--------------------------------------------------------------------------------------------------->
-                <li data-url="">الإخبارية السورية</li>
                 <li data-url="https://play.arab-stream.live/p/syria-1.html">الفضائية السورية</li>
-                <li data-url="https://play.arab-stream.live/p/syria-2.html">سوريا الثانية</li>
-                <li data-url="https://vk.com/video_ext.php?oid=849640780&id=456239054&hd=2&autoplay=1">سوريا دراما</li>
-                <li data-url="https://atvplayer.blogspot.com/p/lana-tv.html">لنا السورية</li>
-                <li data-url="">حلب اليوم</li>
-                <li data-url="https://play.arab-stream.live/p/arabic-news.html">التلفزيون العربي</li>
+                <li data-url="https://live.kwikmotion.com/syriatv02live/syriatv02.smil/playlist.m3u8">سوريا الثانية</li>
+                <li data-url="https://www.parsatv.com/embed.php?name=Al-Araby-TV&auto=true" data-custom-size="true">التلفزيون العربي</li>
                 <!--------------------------------------------------------------------------------------------------->
                 <li data-url="https://play.arab-stream.live/p/giniko.html?ch=887">إل بي سي</li>
                 <li data-url="https://play.arab-stream.live/p/otv.html">أو تي في</li>
                 <li data-url="https://play.arab-stream.live/p/mtv.html">أم تي في</li>
                 <li data-url="https://play.arab-stream.live/p/aljadeed.html">الجديــد</li>
                 <li data-url="https://play.arab-stream.live/p/future-lebanon.html">المستقبل</li>
-                <li data-url="">تلفزيون لبنان</li>
                 <li data-url="https://play.arab-stream.live/p/lebanon-red.html">التلفزيون الأحمر</li>
+                <!-- <li data-url="">تلفزيون لبنان</li> -->
                 <!--------------------------------------------------------------------------------------------------->
+                <li data-url="https://play.arab-stream.live/p/mixbelaraby.html">ميكس بالعربي</li>
+                <li data-url="https://play.arab-stream.live/p/mixone.html">ميكس ون</li>
+                <li data-url="https://play.arab-stream.live/p/mix-aflam.html">ميكس هوليود</li>
+                <li data-url="https://play.arab-stream.live/p/zee-aflam-2.html">زي أفلام</li>
+                <li data-url="https://play.arab-stream.live/p/zee-alwan.html">زي ألوان</li>
+                <li data-url="https://play.arab-stream.live/p/abu-dhabi-tv.html">أبو ظبي</li>
+                <li data-url="https://play.arab-stream.live/p/natgeo.html">ناشيونال جيوغرافي</li>
+                <li data-url="https://www.parsatv.com/embed.php?name=National-Geographic-Kids&auto=true" data-custom-size="true">ناشيونال جيوغرافي - أطفال</li>
+                <li data-url="https://play.arab-stream.live/p/giniko.html?ch=270">دبي</li>
+                <li data-url="https://play.arab-stream.live/p/cbc.html">سي بي سي</li>
+                <li data-url="https://www.elahmad.ch/tv/radiant.php?id=aloula1">المغربية الأولى</li>
+                <!--------------------------------------------------------------------------------------------------->
+                <li data-url="https://www.parsatv.com/embed.php?name=Aghani-Aghani-TV&auto=true" data-custom-size="true">أغاني</li>
                 <li data-url="https://play.arab-stream.live/p/giniko.html?ch=1035">روتانا كوميدي</li>
                 <li data-url="https://play.arab-stream.live/p/rotana-cinema.html">روتانا سينما</li>
                 <li data-url="https://play.arab-stream.live/p/rotanaclassic.html">روتانا كلاسيك</li>
@@ -79,6 +84,7 @@
                 <li data-url="https://play.arab-stream.live/p/giniko.html?ch=1026">بي بي سي</li>
                 <li data-url="https://play.arab-stream.live/p/arabiya-news.html">العربية</li>
                 <li data-url="https://play.arab-stream.live/p/rusia-today-arabic.html">أر تي بالعربي</li>
+                <li data-url="https://www.parsatv.com/embed.php?name=DW-Arabic&auto=true" data-custom-size="true">دي دبليو</li>
                 <li data-url="https://play.arab-stream.live/p/aljazeera.html">الجزيرة</li>
                 <li data-url="https://play.arab-stream.live/p/jazeera-mubasher.html">الجزيرة مباشر</li>
                 <li data-url="https://play.arab-stream.live/p/mayaden-news.html">الميادين</li>
@@ -86,17 +92,8 @@
                 <li data-url="https://play.arab-stream.live/p/hadath-news.html">الحدث</li>
                 <li data-url="https://play.arab-stream.live/p/almanar.html">المنار</li>
                 <!--------------------------------------------------------------------------------------------------->
-
-                <li data-url="https://play.arab-stream.live/p/mixone.html">ميكس ون</li>
-                <li data-url="https://play.arab-stream.live/p/mix-aflam.html">ميكس هوليود</li>
-                <li data-url="https://play.arab-stream.live/p/zee-aflam-2.html">زي أفلام</li>
-                <li data-url="https://play.arab-stream.live/p/zee-alwan.html">زي ألوان</li>
-                <li data-url="">دي دبليو</li>
-                <li data-url="https://play.arab-stream.live/p/abu-dhabi-tv.html">أبو ظبي</li>
-                <li data-url="https://play.arab-stream.live/p/natgeo.html">ناشيونال جيوغرافي</li>
-                <li data-url="https://play.arab-stream.live/p/giniko.html?ch=270">دبي</li>
-                <li data-url="https://play.arab-stream.live/p/cbc.html">سي بي سي</li>
-                <li data-url="">سي بي سي دراما</li>
+                <li data-url="https://www.parsatv.com/embed.php?name=TRT-1&auto=true" data-custom-size="true">TRT 1</li>
+                <li data-url="https://play.arab-stream.live/p/morocco.html?ch=73_arryadia_k2tgcj0">المغرب الرياضية</li>
             </ul>
         </div>
 
