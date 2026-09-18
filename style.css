@@ -77,7 +77,25 @@ body, html {
     font-size: 1.1rem;
     box-shadow: 0 4px 20px rgba(0,0,0,0.6);
 }
+.secondary-btn {
+    position: absolute;
+    bottom: 100px;
+    left: 15%;
+    transform: translateX(-50%);
+    z-index: 20;
+    padding: 15px 45px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid #f57c20;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
 .main-btn:hover{
+    background-color: #f57c20;
+}
+.secondary-btn:hover{
     background-color: #f57c20;
 }
 
@@ -249,3 +267,163 @@ body, html {
     align-items: center;
     justify-content: center;
 }
+
+
+
+
+
+
+
+
+/* === 2. قائمة الأفلام (شبكة 4 بالصف الواحد) === */
+.movies-side {
+    width: 75%;
+    background: #4a4a4a98;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    right: 2%;
+    z-index: 15;
+    border-radius: 15px;
+}
+
+.movies-side h3 {
+    margin: 0 0 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+/* شبكة الأفلام - 4 أعمدة */
+.movie-grid {
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+    overflow-y: auto;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.movie-grid li {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    height: 350px;
+}
+
+.movie-grid li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+}
+
+.movie-grid li span {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.movie-grid li.active {
+    background: #f57c20;
+    transform: scale(1.04);
+    border-color: #ffffff;
+    box-shadow: 0 6px 15px rgba(245, 124, 32, 0.4);
+}
+
+/* شريط التمرير */
+.channel-list::-webkit-scrollbar, .movie-grid::-webkit-scrollbar { width: 6px; }
+.channel-list::-webkit-scrollbar-track, .movie-grid::-webkit-scrollbar-track { background: #333; }
+.channel-list::-webkit-scrollbar-thumb, .movie-grid::-webkit-scrollbar-thumb { background: #f57c20; border-radius: 10px; }
+
+/* === عناصر الريموت وتنسيقاته === */
+.remote-side {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: scale(75%);
+}
+
+.remote-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background: #4a4a4a;
+    padding: 35px 25px;
+    border-radius: 60px;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.4);
+}
+
+.middle-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-btn {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: none;
+    background: #2a2a2a;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.ok-btn {
+    width: 75px;
+    height: 75px;
+    background: #f57c20;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.cancel-btn {
+    background: #333;
+    font-size: 0.8rem;
+    width: 60px !important;
+    height: 38px !important;
+    border-radius: 20px !important;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #bbb;
+}
+
+.cancel-btn:hover {
+    background: #444;
+    color: white;
+    border-color: #f57c20;
+}
+
+.nav-btn:active { transform: scale(0.9); }
