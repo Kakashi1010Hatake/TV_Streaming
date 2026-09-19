@@ -12,7 +12,8 @@
         <iframe id="main-tv-frame" 
                 src="about:blank"
                 allow="autoplay; encrypted-media" 
-                allowfullscreen >
+                allowfullscreen
+                loading="eager">
         </iframe>
     </div>
 
@@ -118,17 +119,57 @@
         <div class="movies-side">
             <h3>قائمة الأفلام</h3>
             <ul class="movie-grid" id="movie-list">
-                <li class="active" data-url="https://a.qfilm.tv/embed.php?vid=1a2ff0d91">
-                    <img src="https://m.media-amazon.com/images/M/MV5BNzMwNzY0NzEtNjQyOS00MDNiLTkzYWMtNGNjNmQyNmU2MDI1XkEyXkFqcGc@._V1_.jpg" alt="فيلم 1">
+                <li class="active" data-url="https://a.qfilm.tv/embed.php?vid=8e14f4707">
+                    <img src="https://cpd-images.b-cdn.net/sm1p3uz6t4hg/2kH2jIjoMnRL9Wbjt74QoJ/9473bffdbe3fd70fb84827241fd8a05e/AutoImport_Aladdin__2019_?width=1080&aspect_ratio=480%3A720&optimizer=image" alt="Aladdin 2019">
+                    <span class="movie-title">Aladdin 2019</span>
                 </li>
-                <li data-url="">
-                    <img src="" alt="فيلم 1">
+                <li data-url="https://a.qfilm.tv/embed.php?vid=0ec2276cd">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMGQ2NTg3MjEtYWZlMS00NDJiLTkzZjAtMTJhYmM4ZTc0NzkwXkEyXkFqcGc@._V1_.jpg" alt="Baby's Day Out 1994">
+                    <span class="movie-title">Baby's Day Out 1994</span>
+                </li>
+                <li data-url="https://a.qfilm.tv/embed.php?vid=e8fb518de">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZGQwMzAyMjEtYjNiNi00NWQwLThiNjQtY2Q2ZWQ5ZGIzMDI4XkEyXkFqcGc@._V1_.jpg" alt="Big Daddy 1999">
+                    <span class="movie-title">Big Daddy 1999</span>
+                </li>
+                <li data-url="https://a.qfilm.tv/embed.php?vid=5935c7f99">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTM3MzM3NDE5MV5BMl5BanBnXkFtZTcwNDE5MTUxNA@@._V1_.jpg" alt="Just Go with It 2011">
+                    <span class="movie-title">Just Go with It 2011</span>
+                </li>
+                <li data-url="https://a.qfilm.tv/embed.php?vid=22c4a2544">
+                    <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p33298_p_v8_ad.jpg" alt="Ella Enchanted 2004">
+                    <span class="movie-title">Ella Enchanted 2004</span>
+                </li>
+                <li data-url="https://a.qfilm.tv/embed.php?vid=1c50eedbe">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT06cA7N3xXAUMb7G2vDahNiL7u2pUp0EmTQJf1sdO-z_zUq2iBcOPVyEA&s=10" alt="Mean Girls 2004">
+                    <span class="movie-title">Mean Girls 2004</span>
+                </li>
+                <li data-url="https://a.qfilm.tv/embed.php?vid=c807d0e65">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTYzMjUxNjQ3OF5BMl5BanBnXkFtZTcwMzgyMTkyNA@@._V1_.jpg" alt="Mean Girls 2 2011">
+                    <span class="movie-title">Mean Girls 2 2011</span>
+                </li>
+                <li data-url="https://a.qfilm.tv/embed.php?vid=1934c0b89">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMDllYjliOTUtMDJjZC00ODIzLWJmNGMtOWI2NzQxMjA2NzdlXkEyXkFqcGc@._V1_.jpg" alt="La La Land 2016">
+                    <span class="movie-title">La La Land 2016</span>
+                </li>
+                <li data-url="https://a.qfilm.tv/embed.php?vid=99fafd1ce">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNzExYmJjNTUtZWFmMi00MzYzLTkxNGEtYzZhNzQ5OWYwZjQ2XkEyXkFqcGc@._V1_.jpg" alt="A Castle for Christmas 2021">
+                    <span class="movie-title">A Castle for Christmas 2021</span>
+                </li>
+                <li data-url="https://a.qfilm.tv/embed.php?vid=c7c053fd5">
+                    <img src="https://m.media-amazon.com/images/I/A1T+lZ6iUZL.jpg" alt="Home Alone 1990">
+                    <span class="movie-title">Home Alone 1990</span>
+                </li>
+                <li data-url="https://a.qfilm.tv/embed.php?vid=18d5b283c">
+                    <img src="https://m.media-amazon.com/images/M/MV5BOGEyYzRmNzYtYzJjZi00ZjhlLWJiNDktYzZhNTgxMzc1NThlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Home Alone 2: Lost in New York 1992">
+                    <span class="movie-title">Home Alone 2: Lost in New York 1992</span>
                 </li>
             </ul>
         </div>
 
-        <div class="remote-side">
-            <div class="remote-control grid-remote">
+        <div class="remote-side-movies">
+            <img class="pic" src="https://m.media-amazon.com/images/M/MV5BNzMwNzY0NzEtNjQyOS00MDNiLTkzYWMtNGNjNmQyNmU2MDI1XkEyXkFqcGc@._V1_.jpg" alt="">
+            
+            <div class="remote-control-movies grid-remote">
                 <button class="nav-btn btn-up-movies">▲</button>
                 <div class="middle-row">
                     <div class="center-actions">

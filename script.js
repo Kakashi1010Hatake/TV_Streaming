@@ -159,19 +159,30 @@ function clearFrame(frame) {
         }
     } catch (e) {}
     
-    frame.removeAttribute('src');
     frame.src = "about:blank";
+    frame.removeAttribute('src');
 }
+
+// function safeLoadStream(newUrl, displayTitle = null) {
+//     clearFrame(mainFrame);
+
+//     setTimeout(() => {
+//         mainFrame.src = newUrl;
+//         if (displayTitle && channelDisplay) {
+//             channelDisplay.innerText = displayTitle;
+//         }
+//     }, 200);
+// }
 
 function safeLoadStream(newUrl, displayTitle = null) {
     clearFrame(mainFrame);
 
     setTimeout(() => {
-        mainFrame.src = newUrl;
+        mainFrame.setAttribute('src', newUrl);
         if (displayTitle && channelDisplay) {
             channelDisplay.innerText = displayTitle;
         }
-    }, 200);
+    }, 300);
 }
 
 // --- الكود الجديد لـ btnOk ---
@@ -196,4 +207,65 @@ btnOkMovies.addEventListener('click', () => {
     moviesList.classList.add('hidden');
     tvTrigger.classList.remove('hidden');
     movieTrigger.classList.remove('hidden');
+});
+
+
+
+
+
+
+// --- أضف هذا الكود في نهاية ملف script.js ---
+let isPageVisible = true;
+
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        isPageVisible = false;
+    } else {
+        isPageVisible = true;
+        if (mainFrame.src && mainFrame.src !== "about:blank") {
+            const currentSrc = mainFrame.src;
+            clearFrame(mainFrame);
+            setTimeout(() => { mainFrame.src = currentSrc; }, 300);
+        }
+    }
+});
+
+// تنظيف الذاكرة تلقائياً كل 45 دقيقة لمنع تجمد الصوت والصورة
+setInterval(() => {
+    if (isPageVisible && mainFrame.src && mainFrame.src !== "about:blank") {
+        const currentSrc = mainFrame.src;
+        mainFrame.src = "about:blank";
+        setTimeout(() => {
+            mainFrame.src = currentSrc;
+        }, 200);
+    }
+}, 45 * 60 * 1000);
+
+const moviePreviewPic = document.querySelector('.remote-side-movies .pic');
+
+function updateMoviesUI() {
+    movieItems.forEach((item, index) => {
+        const isActive = index === movieIndex;
+        item.classList.toggle('active', isActive);
+        
+        if (isActive) {
+            item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+            // استخراج صورة الفيلم المحدد وتحديث المعاينة
+            const currentImg = item.querySelector('img');
+            if (currentImg && moviePreviewPic) {
+                moviePreviewPic.src = currentImg.src;
+                moviePreviewPic.alt = currentImg.alt || 'معاينة الفيلم';
+            }
+        }
+    });
+}
+
+movieTrigger.addEventListener('click', () => {
+    moviesList.classList.remove('hidden');
+    tvTrigger.classList.add('hidden');
+    movieTrigger.classList.add('hidden');
+
+    // تحديث الواجهة والصورة للفيلم الأول المحدد افتراضياً
+    updateMoviesUI();
 });
