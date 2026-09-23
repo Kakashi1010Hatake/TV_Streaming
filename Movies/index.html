@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأفلام</title>
+    <link rel="stylesheet" href="S.css">
+</head>
+<body>
+
+    <div class="video-container" id="video-wrapper">
+        <iframe id="main-tv-frame" 
+                src="about:blank"
+                allow="autoplay; encrypted-media" 
+                allowfullscreen
+                loading="eager">
+        </iframe>
+    </div>
+
+    <div class="baseControl">
+        <button id="btn-open-movies" class="main-btn">الأفلام</button>
+        <button id="btn-home" class="secondary-btn"><a href="../index.html">Home</a></button>
+    </div>
+
+    <div id="tv-overlay-movies" class="overlay hidden">
+        <div class="movies-side">
+            <h3>قائمة الأفلام</h3>
+            <ul class="movie-grid" id="movie-list">
+                <!-- أفلام الكوميديا -->
+                <li data-type="comedy" data-url="https://a.qfilm.tv/embed.php?vid=8e14f4707">
+                    <img src="https://cpd-images.b-cdn.net/sm1p3uz6t4hg/2kH2jIjoMnRL9Wbjt74QoJ/9473bffdbe3fd70fb84827241fd8a05e/AutoImport_Aladdin__2019_?width=1080&aspect_ratio=480%3A720&optimizer=image" alt="Aladdin 2019">
+                    <span class="movie-title">Aladdin 2019</span>
+                </li>
+                <li data-type="comedy" data-url="https://a.qfilm.tv/embed.php?vid=0ec2276cd">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMGQ2NTg3MjEtYWZlMS00NDJiLTkzZjAtMTJhYmM4ZTc0NzkwXkEyXkFqcGc@._V1_.jpg" alt="Baby's Day Out 1994">
+                    <span class="movie-title">Baby's Day Out 1994</span>
+                </li>
+                <li data-type="comedy" data-url="https://a.qfilm.tv/embed.php?vid=e8fb518de">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZGQwMzAyMjEtYjNiNi00NWQwLThiNjQtY2Q2ZWQ5ZGIzMDI4XkEyXkFqcGc@._V1_.jpg" alt="Big Daddy 1999">
+                    <span class="movie-title">Big Daddy 1999</span>
+                </li>
+                <li data-type="comedy" data-url="https://a.qfilm.tv/embed.php?vid=5935c7f99">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTM3MzM3NDE5MV5BMl5BanBnXkFtZTcwNDE5MTUxNA@@._V1_.jpg" alt="Just Go with It 2011">
+                    <span class="movie-title">Just Go with It 2011</span>
+                </li>
+                <li data-type="comedy" data-url="https://a.qfilm.tv/embed.php?vid=22c4a2544">
+                    <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p33298_p_v8_ad.jpg" alt="Ella Enchanted 2004">
+                    <span class="movie-title">Ella Enchanted 2004</span>
+                </li>
+                <li data-type="comedy" data-url="https://a.qfilm.tv/embed.php?vid=1c50eedbe">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT06cA7N3xXAUMb7G2vDahNiL7u2pUp0EmTQJf1sdO-z_zUq2iBcOPVyEA&s=10" alt="Mean Girls 2004">
+                    <span class="movie-title">Mean Girls 2004</span>
+                </li>
+                <li data-type="comedy" data-url="https://a.qfilm.tv/embed.php?vid=c807d0e65">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTYzMjUxNjQ3OF5BMl5BanBnXkFtZTcwMzgyMTkyNA@@._V1_.jpg" alt="Mean Girls 2 2011">
+                    <span class="movie-title">Mean Girls 2 2011</span>
+                </li>
+                <li data-type="comedy" data-url="https://a.qfilm.tv/embed.php?vid=1934c0b89">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMDllYjliOTUtMDJjZC00ODIzLWJmNGMtOWI2NzQxMjA2NzdlXkEyXkFqcGc@._V1_.jpg" alt="La La Land 2016">
+                    <span class="movie-title">La La Land 2016</span>
+                </li>
+                <li data-type="comedy" data-url="https://a.qfilm.tv/embed.php?vid=99fafd1ce">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNzExYmJjNTUtZWFmMi00MzYzLTkxNGEtYzZhNzQ5OWYwZjQ2XkEyXkFqcGc@._V1_.jpg" alt="A Castle for Christmas 2021">
+                    <span class="movie-title">A Castle for Christmas 2021</span>
+                </li>
+                <li data-type="comedy" data-url="https://a.qfilm.tv/embed.php?vid=c7c053fd5">
+                    <img src="https://m.media-amazon.com/images/I/A1T+lZ6iUZL.jpg" alt="Home Alone 1990">
+                    <span class="movie-title">Home Alone 1990</span>
+                </li>
+                <li data-type="comedy" data-url="https://a.qfilm.tv/embed.php?vid=18d5b283c">
+                    <img src="https://m.media-amazon.com/images/M/MV5BOGEyYzRmNzYtYzJjZi00ZjhlLWJiNDktYzZhNTgxMzc1NThlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Home Alone 2: Lost in New York 1992">
+                    <span class="movie-title">Home Alone 2: Lost in New York 1992</span>
+                </li>
+
+                <!-- أفلام الدراما -->
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=609b56d1a">
+                    <img src="https://m.media-amazon.com/images/M/MV5BOWM3NTI3YWEtYjJmMy00M2U5LWI1NzEtZWM3ZDY2ZWNjOGRiXkEyXkFqcGc@._V1_.jpg" alt="The Devil Wears Prada 2006">
+                    <span class="movie-title">The Devil Wears Prada 2006</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=44d3230fc">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZmM3ZDU3ODItZmY5Yi00OTQ2LWE5OTctZTA5NDBhMWJkOGY3XkEyXkFqcGc@._V1_.jpg" alt="The Devil Wears Prada 2 2026">
+                    <span class="movie-title">The Devil Wears Prada 2 2026</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=9d4c5c4af">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNGMyYjYyZDAtNzRiZC00ZjRkLTkwYjktODkxODQzNTFiMTVmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Night at the Museum 2006">
+                    <span class="movie-title">Night at the Museum 2006</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=5dbf5c14f">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMjI1MzM2ODEyMV5BMl5BanBnXkFtZTgwNTIzODAwMzE@._V1_FMjpg_UX1000_.jpg" alt="Night at the Museum: Secret of the Tomb 2014">
+                    <span class="movie-title">Night at the Museum: Secret of the Tomb 2014</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=78d9a98f9">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZGMzYzhjNWUtOTlkOC00NjkzLWEyNDAtZjEwMGEwODI1ZjFjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Babylon 2022">
+                    <span class="movie-title">Babylon 2022</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=0e3477ec1">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVo8jTBhE43G3KoQJiCuwZ-D3n2X-KHaP4UmVtIEuHXqbUkjWJoYa8YQI&s=10" alt="The Kid 1921">
+                    <span class="movie-title">The Kid 1921</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=9eae00344">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgX6XIFM5EITsVe5d8AP-q1fqDhoteOUn16W33jbeccj43vtsbxjZwJCRA&s=10" alt="Love Hard 2021">
+                    <span class="movie-title">Love Hard 2021</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=6732ab56f">
+                    <img src="https://m.media-amazon.com/images/M/MV5BODYwNDYxNDk1Nl5BMl5BanBnXkFtZTgwOTAwMTk2MDE@._V1_.jpg" alt="The Secret Life of Walter Mitty 2013">
+                    <span class="movie-title">The Secret Life of Walter Mitty 2013</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=5cff034e3">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTUwNjUxMTM4NV5BMl5BanBnXkFtZTgwODExMDQzMTI@._V1_FMjpg_UX1000_.jpg" alt="Beauty and the Beast 2017">
+                    <span class="movie-title">Beauty and the Beast 2017</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=f3a376e56">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTY0NDY3MDMxN15BMl5BanBnXkFtZTcwOTM5NzMzOQ@@._V1_FMjpg_UX1000_.jpg" alt="Now You See Me 2013">
+                    <span class="movie-title">Now You See Me 2013</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=768c0db7d">
+                    <img src="https://play-lh.googleusercontent.com/aBzg0mOUs1_-uhGgf7rI4I--aKWpFa--L5lxEGL3DT7FTxktCfn7kX6wpzc-q5zntyJ3aQ" alt="Now You See Me 2 2016">
+                    <span class="movie-title">Now You See Me 2 2016</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=46ee87462">
+                    <img src="https://m.media-amazon.com/images/M/MV5BYmZmZDc1Y2EtMmU2MS00NmMzLTllZmYtNjlkODFkNjZlOGE0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Now You See Me: Now You Don't 2025">
+                    <span class="movie-title">Now You See Me: Now You Don't 2025</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=d70fdb303">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Nowhere_%282023_film%29_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" alt="Nowhere 2023">
+                    <span class="movie-title">Nowhere 2023</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=5dfc09b8a">
+                    <img src="https://lumiere-a.akamaihd.net/v1/images/p_disneymovies_snowwhite2025_poster_v2_78c598d2.jpeg?region=0%2C0%2C540%2C810" alt="Snow White 2025">
+                    <span class="movie-title">Snow White 2025</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=1d5b2238a">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNWRlZmU3ZTItM2JlYi00YTg1LTgxNTItMjMyNzIyZWY5YWJmXkEyXkFqcGc@._V1_.jpg" alt="Fountain of Youth 2025">
+                    <span class="movie-title">Fountain of Youth 2025</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=57662009f">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMjEzOTE3ODM3OF5BMl5BanBnXkFtZTcwMzYyODI4Mg@@._V1_FMjpg_UX1000_.jpg" alt="The Blind Side 2009">
+                    <span class="movie-title">The Blind Side 2009</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=25d8e5bbc">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg" alt="Inception 2010">
+                    <span class="movie-title">Inception 2010</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=99c36056f">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTMzOTk1MzIyN15BMl5BanBnXkFtZTcwNTM3MjczMQ@@._V1_.jpg" alt="Bridge to Terabithia 2007">
+                    <span class="movie-title">Bridge to Terabithia 2007</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=060504e9b">
+                    <img src="https://thumb.wikimedia.org/wikipedia/en/thumb/2/28/The_Tourist_Poster.jpg/250px-The_Tourist_Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="The Tourist 2010">
+                    <span class="movie-title">The Tourist 2010</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=78d586008">
+                    <img src="https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p8403456_p_v10_aq.jpg" alt="Hugo 2011">
+                    <span class="movie-title">Hugo 2011</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=c24b50f3c">
+                    <img src="https://thumb.wikimedia.org/wikipedia/en/thumb/5/59/Hulk_movie.jpg/250px-Hulk_movie.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="Hulk 2003">
+                    <span class="movie-title">Hulk 2003</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=72c08ea30">
+                    <img src="https://thumb.wikimedia.org/wikipedia/en/thumb/f/f0/The_Incredible_Hulk_%28film%29_poster.jpg/250px-The_Incredible_Hulk_%28film%29_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="The Incredible Hulk 2008">
+                    <span class="movie-title">The Incredible Hulk 2008</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=c38538e68">
+                    <img src="https://thumb.wikimedia.org/wikipedia/en/thumb/6/68/The_mummy.jpg/250px-The_mummy.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="The Mummy 1999">
+                    <span class="movie-title">The Mummy 1999</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=5cae35448">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMjdiYzVlNjUtNGI5MC00MDE5LTk0MmQtNDc0YzIzOGRmMDNkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="The Mummy Returns 2001">
+                    <span class="movie-title">The Mummy Returns 2001</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=aabc35fbf">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTU4NDIzMDY1OV5BMl5BanBnXkFtZTcwNjQxMzk3MQ@@._V1_FMjpg_UX1000_.jpg" alt="The Mummy: Tomb of the Dragon Emperor 2008">
+                    <span class="movie-title">The Mummy: Tomb of the Dragon Emperor 2008</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=377dd1aa9">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMzQwMzQ0MjYzMV5BMl5BanBnXkFtZTgwOTIwMTEwNDI@._V1_FMjpg_UX1000_.jpg" alt="November Criminals 2017">
+                    <span class="movie-title">November Criminals 2017</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=20df7922e">
+                    <img src="https://media.themoviedb.org/t/p/w500/iKLZEAnjzr51Ij7TJtNejc5CN3i.jpg" alt="King Arthur 2004">
+                    <span class="movie-title">King Arthur 2004</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=3606fa388">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTY3NTc4OTYxMF5BMl5BanBnXkFtZTcwMjk5NzUyMw@@._V1_.jpg" alt="National Treasure 2004">
+                    <span class="movie-title">National Treasure 2004</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=9928be20c">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAcXGzw3sF07z7iQFUGfT2U1eyrxzOWEoPCgkD7p-l8Q&s" alt="National Treasure: Book of Secrets 2007">
+                    <span class="movie-title">National Treasure: Book of Secrets 2007</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=d96d18902">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDczNzg4OTM3MV5BMl5BanBnXkFtZTcwOTQzMTEzMw@@._V1_.jpg" alt="The Phantom of the Opera 2004">
+                    <span class="movie-title">The Phantom of the Opera 2004</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=78797c7f7">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTM1MTIwNTMxOF5BMl5BanBnXkFtZTcwNjIxMjQyMw@@._V1_.jpg" alt="The Terminal 2004">
+                    <span class="movie-title">The Terminal 2004</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=fa4c5bc87">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNjM1ZDQxYWUtMzQyZS00MTE1LWJmZGYtNGUyNTdlYjM3ZmVmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Schindler's List 1993">
+                    <span class="movie-title">Schindler's List 1993</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=8b135e80c">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTAzMTQzMTA2MjheQTJeQWpwZ15BbWU4MDk2MTg2MzUx._V1_.jpg" alt="The Age of Adaline 2015">
+                    <span class="movie-title">The Age of Adaline 2015</span>
+                </li>
+                <li data-type="drama" data-url="https://a.qfilm.tv/embed.php?vid=5d503dd2d">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZjUzMTFkZGMtYmYyMi00NGMzLTk1YjAtNDU4ZTM3NDI5YTU5XkEyXkFqcGc@._V1_.jpg" alt="The Wolf and the Lion 2021">
+                    <span class="movie-title">The Wolf and the Lion 2021</span>
+                </li>
+
+                <!-- أفلام الأكشن -->
+
+
+                <!-- أفلام الرومانسية -->
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=c584d0540">
+                    <img src="https://m.media-amazon.com/images/M/MV5BM2ZlYTQ2YmUtZTNlNy00OGI0LWFmNjctN2MyNjYzNjAzNjliXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="One Night Only 2026">
+                    <span class="movie-title">One Night Only 2026</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=0be5eb4df">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMjE4NTA1NzExN15BMl5BanBnXkFtZTYwNjc3MjM3._V1_FMjpg_UX1000_.jpg" alt="How to Lose a Guy in 10 Days 2003">
+                    <span class="movie-title">How to Lose a Guy in 10 Days 2003</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=2d41c1ee8">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZWM3ZjRiNGUtNmZkMy00YWNkLWI5MGUtYWI1NTc5NGVkODJkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="27 Dresses 2008">
+                    <span class="movie-title">27 Dresses 2008</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=2425eb31c">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZWZmNGI2Y2QtMjBmNi00ZDNhLWE2ZWMtMTAwYzdkNjMwY2NkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Maid in Manhattan 2002">
+                    <span class="movie-title">Maid in Manhattan 2002</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=aac549109">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZmM0MDlhOTMtNjYxYy00MGI4LWEwODQtZTEyOTFhZTUyMTllXkEyXkFqcGc@._V1_.jpg" alt="Office Romance 2026">
+                    <span class="movie-title">Office Romance 2026</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=598746f2c">
+                    <img src="https://m.media-amazon.com/images/M/MV5BM2ZmZWEyOGItYzVjYi00N2Q3LTlmNDItYmUwZjFhMTJmMzgzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="People We Meet on Vacation 2026">
+                    <span class="movie-title">People We Meet on Vacation 2026</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=544c8446e">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMzgwY2RlYzMtOGNhMi00NzcyLTg1M2YtMzZiYTNiNjdjYjIyXkEyXkFqcGc@._V1_.jpg" alt="Intolerable Cruelty 2003">
+                    <span class="movie-title">Intolerable Cruelty 2003</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=204cb76c7">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTY1MTU1OTA5NF5BMl5BanBnXkFtZTcwNTM1MTQyOA@@._V1_FMjpg_UX1000_.jpg" alt="Playing for Keeps 2012">
+                    <span class="movie-title">Playing for Keeps 2012</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=6ae21e56e">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyC6cxIfLLVS4LWz28TylFCwP3slKbcFz9IssJFxQK_RrNAKfKpv-tJqIT&s=10" alt="Baywatch 2017">
+                    <span class="movie-title">Baywatch 2017</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=ca9f57ae8">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMjAwMzc4MDgxNF5BMl5BanBnXkFtZTYwNjUwMzE3._V1_FMjpg_UX1000_.jpg" alt="50 First Dates 2004">
+                    <span class="movie-title">50 First Dates 2004</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=733f3e93f">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTcwODUwMTMxN15BMl5BanBnXkFtZTcwNzc3MjcyMQ@@._V1_FMjpg_UX1000_.jpg" alt="Shall We Dance 2004">
+                    <span class="movie-title">Shall We Dance 2004</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=71cc801d4">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/0/09/Casanova_film.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" alt="Casanova 2005">
+                    <span class="movie-title">Casanova 2005</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=95b308a42">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMjA0Mzg2NjUzMl5BMl5BanBnXkFtZTcwNDg2ODUzMQ@@._V1_FMjpg_UX1000_.jpg" alt="Just Friends 2005">
+                    <span class="movie-title">Just Friends 2005</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=dce698cf2">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI_LZ-hB2AUYWeKbiSd9BvYrvsE8dPiLKWYOo5nfMRVQ&s=10" alt="The Layover 2017">
+                    <span class="movie-title">The Layover 2017</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=04dd63911">
+                    <img src="https://m.media-amazon.com/images/M/MV5BM2E1NDViNmItMzU5Yy00YWRiLTg4OTItM2VkZmQyMTdkNzY0XkEyXkFqcGc@._V1_.jpg" alt="Through My Window 2022">
+                    <span class="movie-title">Through My Window 2022</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=9bd2bd8f4">
+                    <img src="https://m.media-amazon.com/images/S/pv-target-images/ed736b01c419cfd1521b4c8ee00b4155f8d0943af3437873dff6180a843684f5.jpg" alt="How Much Do You Love Me? 2005">
+                    <span class="movie-title">How Much Do You Love Me? 2005</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=efc110fd7">
+                    <img src="https://m.media-amazon.com/images/M/MV5BOGE3Mzg5NDQtNTc5Yi00NWFkLWEwYjEtZDk4MjRhNWU0NDhjXkEyXkFqcGc@._V1_.jpg" alt="Mavka: The True Myth 2026">
+                    <span class="movie-title">Mavka: The True Myth 2026</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=28fc98ae3">
+                    <img src="https://cdng.europosters.eu/pod_public/1300/317198.jpg" alt="My Fault 2023">
+                    <span class="movie-title">My Fault 2023</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=7048a4f3e">
+                    <img src="https://de.web.img3.acsta.net/img/38/60/3860025d46e6bba7afdf5989869a2fe2.jpg" alt="Culpa Tuya 2024">
+                    <span class="movie-title">Culpa Tuya 2024</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=ab2c5ce86">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTYxMTgxNDI3MV5BMl5BanBnXkFtZTcwMzIxMTIzMw@@._V1_.jpg" alt="The Lake House 2006">
+                    <span class="movie-title">The Lake House 2006</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=f7ef8685d">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNzZiODcyNDYtNWIxNS00NDdiLWE3Y2QtOWIxYjk5NmNiOTcyXkEyXkFqcGc@._V1_.jpg" alt="You+Me - Against the World 2026">
+                    <span class="movie-title">You+Me - Against the World 2026</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=04fe0995d">
+                    <img src="https://m.media-amazon.com/images/S/pv-target-images/cbbd309a607fac4a29ae7890c45b6887fb75f34972c4e551d925ecd21301f89f.jpg" alt="After Ever Happy 2022">
+                    <span class="movie-title">After Ever Happy 2022</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=c6f5a9614">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZDdhZDJlMWItZGI4NC00ZjdjLWExZWUtMzc2OGYyMGYzZTUxXkEyXkFqcGc@._V1_.jpg" alt="Wicker Park 2004">
+                    <span class="movie-title">Wicker Park 2004</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=4d66441af">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNWNkNzEyM2QtMmE1ZC00Zjg5LWE2MDUtYWFhNzE5ZTRhZWNlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Eiffel 2021">
+                    <span class="movie-title">Eiffel 2021</span>
+                </li>
+                <li data-type="romance" data-url="https://a.qfilm.tv/embed.php?vid=5ab0cea80">
+                    <img src="https://m.media-amazon.com/images/S/pv-target-images/9c48e55d480210377e5ee908932c67f000d0840a904c51885911fa195ada8f5d.jpg" alt="Trust 2021">
+                    <span class="movie-title">Trust 2021</span>
+                </li>
+
+                <!-- أفلام الأنمي -->
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=85c2d3bd1">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMjIzMzA1OTkzNV5BMl5BanBnXkFtZTgwODE3MjM4NzE@._V1_FMjpg_UX1000_.jpg" alt="The Secret Life of Pets 2016">
+                    <span class="movie-title">The Secret Life of Pets 2016</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=ed9cd5103">
+                    <img src="https://images.contentstack.io/v3/assets/blt13adb7e2033fcee5/blt635e3deb7666b4d9/6949f704c52b640cf8e0e35d/TheSecretLifeOfPets2_Digital_Poster_2000x3000.jpg" alt="The Secret Life of Pets 2 2019">
+                    <span class="movie-title">The Secret Life of Pets 2 2019</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=33c072e68">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/2/26/Moana_Teaser_Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" alt="Moana 2016">
+                    <span class="movie-title">Moana 2016</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=bdcd3bbd4">
+                    <img src="https://thumb.wikimedia.org/wikipedia/en/thumb/c/c1/Moana_%282026_film%29_poster.jpg/250px-Moana_%282026_film%29_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="Moana 2026">
+                    <span class="movie-title">Moana 2026</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=9d8338177">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZTA3OWVjOWItNjE1NS00NzZiLWE1MjgtZDZhMWI1ZTlkNzYwXkEyXkFqcGc@._V1_.jpg" alt="Toy Story 1995">
+                    <span class="movie-title">Toy Story 1995</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=92e268c64">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNzVmODlhMDEtY2YxZi00OTVjLTlkNTktN2Q2OTRlM2I4M2FhXkEyXkFqcGc@._V1_.jpg" alt="Toy Story 2 1999">
+                    <span class="movie-title">Toy Story 2 1999</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=33376dd66">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaKHJCN6PSeuOL1fhX0q8Wy1Fr5OsSs8_US72LKuzOa6BQeN1QAcqoNzE&s=10" alt="Toy Story 3 2010">
+                    <span class="movie-title">Toy Story 3 2010</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=7cfedef3d">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTYzMDM4NzkxOV5BMl5BanBnXkFtZTgwNzM1Mzg2NzM@._V1_FMjpg_UX1000_.jpg" alt="Toy Story 4 2019">
+                    <span class="movie-title">Toy Story 4 2019</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=904a32677">
+                    <img src="https://lumiere-a.akamaihd.net/v1/images/image_30707e06.jpeg" alt="Toy Story 5">
+                    <span class="movie-title">Toy Story 5</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=eb2f415de">
+                    <img src="https://de.web.img2.acsta.net/img/0f/2a/0f2a717ac88b4a2a8cee25a8de306193.jpg" alt="Hoppers 2026">
+                    <span class="movie-title">Hoppers 2026</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=7e35fc34b">
+                    <img src="https://lumiere-a.akamaihd.net/v1/images/p_disneymovies_zootopia_poster_v2_a1e31204.jpeg" alt="Zootopia 2016">
+                    <span class="movie-title">Zootopia 2016</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=ba4f931d8">
+                    <img src="https://www.sanity.com.au/media/Images/fullimage/1811790/SDC_3605663_2026-03-2--14-46-49.jpg" alt="Zootopia 2 2025">
+                    <span class="movie-title">Zootopia 2 2025</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=b6568f6ae">
+                    <img src="https://m.media-amazon.com/images/M/MV5BODI4NzMyNjE0MF5BMl5BanBnXkFtZTgwMTcwNzI0MzE@._V1_FMjpg_UX1000_.jpg" alt="Minions 2015">
+                    <span class="movie-title">Minions 2015</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=39d57ed5c">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZTAzMTkyNmQtNTMzZS00MTM1LWI4YzEtMjVlYjU0ZWI5Y2IzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Minions: The Rise of Gru 2022">
+                    <span class="movie-title">Minions: The Rise of Gru 2022</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=b0f6a7fc5">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTQ1NjAxMDUzN15BMl5BanBnXkFtZTgwOTE5NDM3MDE@._V1_FMjpg_UX1000_.jpg" alt="The Nut Job 2014">
+                    <span class="movie-title">The Nut Job 2014</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=44973dc01">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMzE2MWI4OGYtNzNjZi00NzFiLWJjOGYtOThmZDg2MWY2OWVlXkEyXkFqcGc@._V1_.jpg" alt="The Nut Job 2: Nutty by Nature 2017">
+                    <span class="movie-title">The Nut Job 2: Nutty by Nature 2017</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=8bab561ef">
+                    <img src="https://cdn.kinocheck.com/i/2cwhpnngh4.jpg" alt="The SpongeBob Movie: Sponge Out of Water 2015">
+                    <span class="movie-title">The SpongeBob Movie: Sponge Out of Water 2015</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=155f3f234">
+                    <img src="https://m.media-amazon.com/images/M/MV5BYWIzMjE4NTEtM2QxOS00ZGQ1LWJhMzItMGVmY2ViYTIzYTU0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="The Lion King 3: Hakuna Matata 2004">
+                    <span class="movie-title">The Lion King 3: Hakuna Matata 2004</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=7c689a476">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMDBlYzU2OGMtOGJjNi00ZGZjLWIwNjMtYzdiZjkwYWNjZDljXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Ice Age 2002">
+                    <span class="movie-title">Ice Age 2002</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=1fa669b71">
+                    <img src="https://m.media-amazon.com/images/M/MV5BYjc3Mzg5NzctZjQzZC00YTRiLWExYTItMTQwZjQ3NmQ3Mzg2XkEyXkFqcGc@._V1_.jpg" alt="Ice Age 2006">
+                    <span class="movie-title">Ice Age 2006</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=feaf61018">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNWI0NDZkOTktZDBjNi00MGMyLTg0OWItYzc5NTYzODU3YzgwXkEyXkFqcGc@._V1_.jpg" alt="Ice Age 2009">
+                    <span class="movie-title">Ice Age 2009</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=614f85711">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNWZkMmVlMWQtZGMzYi00MmZjLWJjNWMtYzVkOTEyZDA3NjAzXkEyXkFqcGc@._V1_.jpg" alt="Ice Age 2012">
+                    <span class="movie-title">Ice Age 2012</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=7551189c2">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZmExOGMxNzMtYjc3MC00OWU5LTg5OTAtNmRhNzBkYzk2ZGE1XkEyXkFqcGc@._V1_.jpg" alt="Ice Age 2016">
+                    <span class="movie-title">Ice Age 2016</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=755343917">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMjhmNDg4NTQtOWNjYi00NjQ0LTgwNzItZDk5Nzk1ZmZlOWEyXkEyXkFqcGc@._V1_.jpg" alt="Ice Age 2022">
+                    <span class="movie-title">Ice Age 2022</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=4a6ecc7e6">
+                    <img src="https://thumb.wikimedia.org/wikipedia/en/thumb/d/d0/Ice_Age_-_A_Mammoth_Christmas_poster.jpg/250px-Ice_Age_-_A_Mammoth_Christmas_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="Ice Age: A Mammoth Christmas 2011">
+                    <span class="movie-title">Ice Age: A Mammoth Christmas 2011</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=8b9ed08cd">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTBkOTUyNzUtYjU4OC00ZjU4LWExZmItZjNjYWFhYmRiNDAyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Ice Age: The Great Egg-Scapade 2016">
+                    <span class="movie-title">Ice Age: The Great Egg-Scapade 2016</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=23f1b966b">
+                    <img src="https://m.media-amazon.com/images/M/MV5BYzU2MTkwZjQtYmU0ZS00NWRlLWI2ODAtOGE1NTgwNDNlOTAzXkEyXkFqcGc@._V1_.jpg" alt="Sonic the Hedgehog 2020">
+                    <span class="movie-title">Sonic the Hedgehog 2020</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=55c408e9e">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMDBiYzk0YTMtNWRiYi00YWY0LWE3NjgtYmJiYTAwZmYzOTM0XkEyXkFqcGc@._V1_.jpg" alt="Sonic the Hedgehog 2 2022">
+                    <span class="movie-title">Sonic the Hedgehog 2 2022</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=18c84a8ca">
+                    <img src="https://thumb.wikimedia.org/wikipedia/en/thumb/a/ae/Scooby-Doo_poster.jpg/250px-Scooby-Doo_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="Scooby-Doo 2002">
+                    <span class="movie-title">Scooby-Doo 2002</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=631b9f849">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZTc2NDUwYmEtNDBlMi00Y2FhLWE1NDAtNDYyY2Q1MDAyZjE3XkEyXkFqcGc@._V1_.jpg" alt="Scooby-Doo 2: Monsters Unleashed 2004">
+                    <span class="movie-title">Scooby-Doo 2: Monsters Unleashed 2004</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=ee27be9da">
+                    <img src="https://m.media-amazon.com/images/M/MV5BN2FkMTRkNTUtYTI0NC00ZjI4LWI5MzUtMDFmOGY0NmU2OGY1XkEyXkFqcGc@._V1_.jpg" alt="Shrek 2001">
+                    <span class="movie-title">Shrek 2001</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=b7ab2ba62">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMzNmNjQ1NmUtNzhiZS00YWE2LTg4N2ItZTA2ODdmOTMwOTQ1XkEyXkFqcGc@._V1_.jpg" alt="Shrek 2 2004">
+                    <span class="movie-title">Shrek 2 2004</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=2580eef8f">
+                    <img src="https://m.media-amazon.com/images/M/MV5BOTgyMjc3ODk2MV5BMl5BanBnXkFtZTcwMjY0MjEzMw@@._V1_FMjpg_UX1000_.jpg" alt="Shrek the Third 2007">
+                    <span class="movie-title">Shrek the Third 2007</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=c915b69de">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTY0OTU1NzkxMl5BMl5BanBnXkFtZTcwMzI2NDUzMw@@._V1_FMjpg_UX1000_.jpg" alt="Shrek Forever After 2010">
+                    <span class="movie-title">Shrek Forever After 2010</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=86a30db48">
+                    <img src="https://m.media-amazon.com/images/M/MV5BM2JkOTRkZTctN2ZiMy00ZGRmLWJkNzQtOGJkNmFiM2ZjNjYzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="The Curse of the Were-Rabbit 2005">
+                    <span class="movie-title">The Curse of the Were-Rabbit 2005</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=6cc765f67">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN4cvRhtQQtTQO8XmLut_xKwYR_HYK7GnYCMtvLb7QGQ&s" alt="Fireheart 2022">
+                    <span class="movie-title">Fireheart 2022</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=3ec05d9f1">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTQ4MDk4NjEzN15BMl5BanBnXkFtZTcwNzAzNTMyNA@@._V1_.jpg" alt="The Smurfs 2011">
+                    <span class="movie-title">The Smurfs 2011</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=0d2318118">
+                    <img src="https://cdn.kinocheck.com/i/w=1200/b7teqzgweo.jpg" alt="The Smurfs 2 2013">
+                    <span class="movie-title">The Smurfs 2 2013</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=9bc43cf28">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTg1NjgyMTYzM15BMl5BanBnXkFtZTgwMzIxNDc4MDI@._V1_.jpg" alt="Smurfs: The Lost Village 2017">
+                    <span class="movie-title">Smurfs: The Lost Village 2017</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=e37eab5b0">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTg5MzUxNzgxNV5BMl5BanBnXkFtZTgwMTM2NzQ3MjI@._V1_.jpg" alt="The Boss Baby 2017">
+                    <span class="movie-title">The Boss Baby 2017</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=4c73b25fe">
+                    <img src="https://m.media-amazon.com/images/I/71KyDRDaDAL.jpg" alt="The Boss Baby: Family Business 2021">
+                    <span class="movie-title">The Boss Baby: Family Business 2021</span>
+                </li>
+                <li data-type="anime" data-url="https://a.qfilm.tv/embed.php?vid=22a65031a">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/8/80/How_To_Train_Your_Dragon_2025_Poster.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original" alt="How to Train Your Dragon 2025">
+                    <span class="movie-title">How to Train Your Dragon 2025</span>
+                </li>
+                
+                <!-- أفلام عربي -->
+                <li data-type="arabic" data-url="غدي">
+                    <img src="https://a.qfilm.tv/embed.php?vid=6ecdc0bab" alt="Arabic:">
+                    <span class="movie-title">Arabic:</span>
+                </li>
+                <li data-type="arabic" data-url="السفارة في العمارة (2005)">
+                    <img src="https://a.qfilm.tv/embed.php?vid=4e99b4d16" alt="https://play-lh.googleusercontent.com/_avRnFfgFShvxwhzutARmNGa9exLYXJ0741NizkyNb6gczeZiWjI7sSiusCmHeEyqnSkq8aRi53aWRThtPA">
+                    <span class="movie-title">https://play-lh.googleusercontent.com/_avRnFfgFShvxwhzutARmNGa9exLYXJ0741NizkyNb6gczeZiWjI7sSiusCmHeEyqnSkq8aRi53aWRThtPA</span>
+                </li>
+                <li data-type="arabic" data-url="الأفوكاتو (1984)">
+                    <img src="https://a.qfilm.tv/embed.php?vid=6bab0b48f" alt="https://upload.wikimedia.org/wikipedia/ar/c/c0/%D8%BA%D9%84%D8%A7%D9%81_%D8%A7%D9%84%D8%B3%D9%81%D8%A7%D8%B1%D8%A9_%D9%81%D9%8A_%D8%A7%D9%84%D8%B9%D9%85%D8%A7%D8%B1%D8%A9_%282005%29.jpg?utm_source=ar.wikipedia.org&utm_campaign=index&utm_content=original">
+                    <span class="movie-title">https://upload.wikimedia.org/wikipedia/ar/c/c0/%D8%BA%D9%84%D8%A7%D9%81_%D8%A7%D9%84%D8%B3%D9%81%D8%A7%D8%B1%D8%A9_%D9%81%D9%8A_%D8%A7%D9%84%D8%B9%D9%85%D8%A7%D8%B1%D8%A9_%282005%29.jpg?utm_source=ar.wikipedia.org&utm_campaign=index&utm_content=original</span>
+                </li>
+                <li data-type="arabic" data-url="نمس بوند (2008)">
+                    <img src="https://a.qfilm.tv/embed.php?vid=702cab034" alt="https://upload.wikimedia.org/wikipedia/ar/a/ac/%D8%BA%D9%84%D8%A7%D9%81_%D8%A7%D9%84%D8%A3%D9%81%D9%88%D9%83%D8%A7%D8%AA%D9%88_%281984%29.jpg?utm_source=ar.wikipedia.org&utm_campaign=index&utm_content=original">
+                    <span class="movie-title">https://upload.wikimedia.org/wikipedia/ar/a/ac/%D8%BA%D9%84%D8%A7%D9%81_%D8%A7%D9%84%D8%A3%D9%81%D9%88%D9%83%D8%A7%D8%AA%D9%88_%281984%29.jpg?utm_source=ar.wikipedia.org&utm_campaign=index&utm_content=original</span>
+                </li>
+                
+                <!-- سلاسل -->
+                <li data-type="series" data-url="https://a.qfilm.tv/embed.php?vid=ffb525b22">
+                    <img src="https://cdn.kinocheck.com/i/w=1200/dohna03sdg.jpg" alt="Pirates of the Caribbean: The Curse of the Black Pearl 2003">
+                    <span class="movie-title">Pirates of the Caribbean: The Curse of the Black Pearl 2003</span>
+                </li>
+                
+                <!-- دينية -->
+                <li data-type="religious" data-url="https://a.qfilm.tv/embed.php?vid=beef5004a">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNzMxY2Y4MzktMGNkNC00ODFjLWI3MGMtMzM2M2ExNmQxMGFmXkEyXkFqcGc@._V1_.jpg" alt="The Passion of the Christ 2004">
+                    <span class="movie-title">The Passion of the Christ 2004</span>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="remote-side-movies">
+            <img class="pic" src="https://m.media-amazon.com/images/M/MV5BNzMwNzY0NzEtNjQyOS00MDNiLTkzYWMtNGNjNmQyNmU2MDI1XkEyXkFqcGc@._V1_.jpg" alt="">
+            
+            <div class="control">
+                <div class="remote-control-movies grid-remote">
+                <button class="nav-btn btn-up-movies">▲</button>
+                <div class="middle-row">
+                    <div class="center-actions">
+                        <button class="nav-btn ok-btn" id="btn-ok-movies">OK</button>
+                        <button class="nav-btn cancel-btn" id="btn-cancel-movies">إلغاء</button>
+                    </div>
+                </div>
+                <button class="nav-btn btn-down-movies">▼</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
