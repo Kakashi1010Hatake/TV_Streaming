@@ -71,7 +71,8 @@ function clearFrame(frame) {
 
 function safeLoadStream(newUrl, displayTitle = null) {
     clearFrame(mainFrame);
-
+    mainFrame.removeAttribute('sandbox');
+    
     setTimeout(() => {
         mainFrame.setAttribute('src', newUrl);
         if (displayTitle && channelDisplay) {
